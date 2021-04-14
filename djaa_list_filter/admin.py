@@ -28,7 +28,7 @@ class AjaxAutocompleteSelectWidget(AutocompleteSelect):
         self.model = kwargs.pop('model')
         self.field_name = kwargs.pop('field_name')
         kwargs.update(admin_site=self.model_admin.admin_site)
-        kwargs.update(rel=getattr(self.model, self.field_name).field.remote_field)
+        kwargs.update(field=getattr(self.model, self.field_name).field)
         super().__init__(*args, **kwargs)
 
     def render(self, name, value, attrs=None, renderer=None):
