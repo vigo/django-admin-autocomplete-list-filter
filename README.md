@@ -122,7 +122,7 @@ This project is licensed under MIT
 
 ---
 
-## Contributer(s)
+## Contributor(s)
 
 * [Uğur "vigo" Özyılmazel](https://github.com/vigo) - Author, Maintainer
 * [Can Adıyaman](https://github.com/canadiyaman) - Author, Maintainer
