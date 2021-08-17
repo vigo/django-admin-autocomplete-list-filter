@@ -134,6 +134,7 @@ This project is licensed under MIT
 * [Guglielmo Celata](https://github.com/guglielmo) - Contributor
 * [Joseph Bane](https://github.com/havocbane) - Contributor
 * [Ryohei Endo](https://github.com/rendoh) - Contributor
+* [Peter Farrell](https://github.com/maestrofjp) - Contributor
 
 ---
 
