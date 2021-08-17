@@ -1,8 +1,8 @@
 ![Python](https://img.shields.io/badge/python-3.5-green.svg)
 ![Python](https://img.shields.io/badge/python-3.6-green.svg)
 ![Python](https://img.shields.io/badge/python-3.7-green.svg)
-![Django](https://img.shields.io/badge/django-2.1-green.svg)
-![Django](https://img.shields.io/badge/django-2.2-green.svg)
+![Python](https://img.shields.io/badge/python-3.9-green.svg)
+![Django](https://img.shields.io/badge/django-3.+-green.svg)
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
 [![PyPI version](https://badge.fury.io/py/django-admin-autocomplete-list-filter.svg)](https://badge.fury.io/py/django-admin-autocomplete-list-filter)
 
@@ -12,6 +12,10 @@ Ajax autocomplete list filter helper for Django admin. Uses Django’s built-in
 autocomplete widget! No extra package or install required!
 
 ![After](screenshots/demo.gif?v=2 "Widget in action...")
+
+## Update
+
+Dropped support for Django 2 family. Works with **Django 3** or higher!
 
 ## Installation and Usage
 
@@ -122,11 +126,14 @@ This project is licensed under MIT
 
 ---
 
-## Contributer(s)
+## Contributor(s)
 
 * [Uğur "vigo" Özyılmazel](https://github.com/vigo) - Author, Maintainer
 * [Can Adıyaman](https://github.com/canadiyaman) - Author, Maintainer
 * [Erdi Mollahüseyinoğlu](https://github.com/erdimollahuseyin) - Author, Maintainer
+* [Guglielmo Celata](https://github.com/guglielmo) - Contributor
+* [Joseph Bane](https://github.com/havocbane) - Contributor
+* [Ryohei Endo](https://github.com/rendoh) - Contributor
 
 ---
 
@@ -148,6 +155,12 @@ All PR’s are welcome!
 - Improve JavaScript code :)
 
 ## Change Log
+
+**2021-08-17**
+
+- [Fix Django 3 compatibility changes](https://github.com/demiroren-teknoloji/django-admin-autocomplete-list-filter/pull/6)
+- [Allow for more than one autocomplete field](https://github.com/demiroren-teknoloji/django-admin-autocomplete-list-filter/pull/5)
+- [staticfiles fix](https://github.com/demiroren-teknoloji/django-admin-autocomplete-list-filter/pull/3)
 
 **2019-10-25**
 

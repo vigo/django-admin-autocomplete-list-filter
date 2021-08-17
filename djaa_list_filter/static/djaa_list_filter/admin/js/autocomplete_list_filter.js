@@ -17,14 +17,14 @@ function handle_querystring_and_redirect(querystring_value, qs_target_value, sel
 django.jQuery(document).ready(function(){
     django.jQuery(".ajax-autocomplete-select-widget-wrapper select").on('select2:unselect', function(e){
         var qs_target_value = django.jQuery(this).parent().data("qs-target-value");
-        var querystring_value = django.jQuery(this).closest("form").find('input[name="querystring_value"]').val();
+        var querystring_value = django.jQuery(this).closest("form").find('input[name$="querystring_value"]').val();
         handle_querystring_and_redirect(querystring_value, qs_target_value, "");
     });
 
     django.jQuery(".ajax-autocomplete-select-widget-wrapper select").on('change', function(e, choice){
         var selection = django.jQuery(e.target).val() || "";
         var qs_target_value = django.jQuery(this).parent().data("qs-target-value");
-        var querystring_value = django.jQuery(this).closest("form").find('input[name="querystring_value"]').val();
+        var querystring_value = django.jQuery(this).closest("form").find('input[name$="querystring_value"]').val();
         if(selection.length > 0){
             handle_querystring_and_redirect(querystring_value, qs_target_value, selection);
         }
