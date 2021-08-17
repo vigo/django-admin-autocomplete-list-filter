@@ -15,7 +15,15 @@ autocomplete widget! No extra package or install required!
 
 ## Update
 
-Dropped support for Django 2 family. Works with **Django 3** or higher!
+Dropped support for Django 2 family. Works with **Django 3** or higher!. `master`
+branch is renamed to `main`... You can fix your existing clones via;
+
+```bash
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
+```
 
 ## Installation and Usage
 
@@ -162,6 +170,7 @@ All PR’s are welcome!
 - [Fix Django 3 compatibility changes](https://github.com/demiroren-teknoloji/django-admin-autocomplete-list-filter/pull/6)
 - [Allow for more than one autocomplete field](https://github.com/demiroren-teknoloji/django-admin-autocomplete-list-filter/pull/5)
 - [staticfiles fix](https://github.com/demiroren-teknoloji/django-admin-autocomplete-list-filter/pull/3)
+- `master` branch is renamed to `main`
 
 **2019-10-25**
 
