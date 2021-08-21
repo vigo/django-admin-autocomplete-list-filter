@@ -28,7 +28,7 @@ class AjaxAutocompleteSelectWidget(AutocompleteSelect):
         self.model = kwargs.pop('model')
         self.field_name = kwargs.pop('field_name')
         kwargs.update(admin_site=self.model_admin.admin_site)
-        kwargs.update(rel=getattr(self.model, self.field_name).field.remote_field)
+        kwargs.update(field=getattr(self.model, self.field_name).field)
         super().__init__(*args, **kwargs)
 
     def render(self, name, value, attrs=None, renderer=None):
@@ -66,7 +66,7 @@ class AjaxAutocompleteListFilter(admin.RelatedFieldListFilter):
         initial_values = dict(querystring_value=request.GET.urlencode())
         if autocomplete_field_initial_value:
             initial_values.update(autocomplete_field=autocomplete_field_initial_value)
-        self.autocomplete_form = AutocompleteForm(initial=initial_values)
+        self.autocomplete_form = AutocompleteForm(initial=initial_values, prefix=field.name)
 
     def get_queryset_for_field(self, model, name):
         """
@@ -90,7 +90,7 @@ class AjaxAutocompleteListFilterModelAdmin(admin.ModelAdmin):
         autocomplete_list_filter = self.get_autocomplete_list_filter()
         if autocomplete_list_filter:
             for field in autocomplete_list_filter:
-                list_filter.append((field, AjaxAutocompleteListFilter))
+                list_filter.insert(0, (field, AjaxAutocompleteListFilter))
         return list_filter
 
     def get_autocomplete_list_filter(self):
